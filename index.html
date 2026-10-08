@@ -197,23 +197,30 @@
   .gallery-grid{
     display:grid;
     grid-template-columns:1fr;
-    gap:12px;
+    gap:10px;
   }
-  .gallery-grid img{
+  .gallery-grid > img{
     width:100%;
-    aspect-ratio:3/4;
+    aspect-ratio:4/3;
     object-fit:cover;
     border-radius:12px;
     background:#1a1a1a;
   }
-  .gallery-row-2{
-    display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  .gallery-row-2, .gallery-row-3{
+    display:grid;gap:10px;
   }
-  .gallery-row-2 img{aspect-ratio:1/1}
-  .gallery-row-3{
-    display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;
+  .gallery-row-2{grid-template-columns:1fr 1fr}
+  .gallery-row-3{grid-template-columns:1fr 1fr 1fr}
+  .gallery-row-2 img, .gallery-row-3 img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:12px;
+    background:#1a1a1a;
   }
-  .gallery-row-3 img{aspect-ratio:1/1}
+  .g-hero{object-position:center 30%}
+  .g-side{object-position:center 35%}
+  .g-thumb{object-position:center 40%}
 
   /* ============== INFO ============== */
   .info{background:var(--bg)}
@@ -411,15 +418,15 @@
     <h2 class="sec-title">Galeria</h2>
 
     <div class="gallery-grid">
-      <img src="./assets/6.png" alt="Corte degradê" loading="lazy" width="441" height="581">
+      <img class="g-hero" src="./assets/6.png" alt="Corte degradê" loading="lazy" width="441" height="581">
       <div class="gallery-row-2">
-        <img src="./assets/11.png" alt="Corte clássico" loading="lazy" width="441" height="581">
-        <img src="./assets/7.png" alt="Barba" loading="lazy" width="441" height="581">
+        <img class="g-side" src="./assets/11.png" alt="Corte clássico" loading="lazy" width="441" height="581">
+        <img class="g-side" src="./assets/8.png" alt="Corte e barba" loading="lazy" width="441" height="581">
       </div>
       <div class="gallery-row-3">
-        <img src="./assets/10.png" alt="Corte infantil" loading="lazy" width="441" height="581">
-        <img src="./assets/8.png" alt="Corte e barba" loading="lazy" width="441" height="581">
-        <img src="./assets/9.png" alt="Fachada" loading="lazy" width="450" height="450">
+        <img class="g-thumb" src="./assets/10.png" alt="Corte infantil" loading="lazy" width="441" height="581">
+        <img class="g-thumb" src="./assets/7.png" alt="Barba" loading="lazy" width="441" height="581">
+        <img class="g-thumb" src="./assets/2.png" alt="Interior da barbearia" loading="lazy" width="441" height="581">
       </div>
     </div>
   </div>
